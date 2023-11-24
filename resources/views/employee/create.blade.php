@@ -3,16 +3,17 @@
 @section('title', 'Data Karyawan')
 <div class="container-fluid">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <div class="row mb-2">
-        <div class="col-sm-6">
-            <h2 class="m-0 text-dark">Tambah Data Karyawan</h2>
-        </div>
+
+@section('content')
+<div class="row mb-2">
+    <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Tambah Data Karyawan</h2>
     </div>
 </div>
-@section('content')
-    <div class="box-header with-border">
-    </div>
-    <br>
+
+    <div class="card">
+        <div class="card-header">
+        <br>
     <form method="POST" action="{{ route('employee.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="row g-2">
@@ -83,7 +84,7 @@
             <div>
                 <br>
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="/employees" class="btn btn-success btn-xs btn-flat"><i class="fa fa-plus-circle"></i>
+                <a href="/employee" class="btn btn-success btn-xs btn-flat"><i class="fa fa-plus-circle"></i>
                     << Kembali </a>
             </div>
         </div>

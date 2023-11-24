@@ -2,13 +2,14 @@
 @section('title', 'Karyawan')
 <div class="container-fluid">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <div class="row mb-2">
-        <div class="col-sm-6">
-            <h2 class="m-0 text-dark">Employee | Detail Data</h2>
-        </div>
+
+@section('content')
+<div class="row mb-2">
+    <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Employee | Detail Data</h2>
     </div>
 </div>
-@section('content')
+</div>
 <div class="card-body">
     <div class="row">
         <div class="col-md-8">
